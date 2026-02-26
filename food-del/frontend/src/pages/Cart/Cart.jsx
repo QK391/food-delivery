@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "./Cart.css"
-import { StoreContext } from "../../context/StoreContext";
+import { StoreContext } from "../../context/store-context";
 import { useNavigate } from "react-router-dom";
 const Cart = () => {
-    const { cartItems, food_list, removeFromcart, getTotalCartAmount, url } = useContext(StoreContext);
+    const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
     const navigate = useNavigate();
 
     return (
@@ -19,7 +19,7 @@ const Cart = () => {
                 </div>
                 <br />
                 <hr />
-                {food_list.map((item, index) => {
+                {food_list.map((item) => {
                     if (cartItems[item._id] > 0) {
                         return (
                             <div>
@@ -30,7 +30,7 @@ const Cart = () => {
                                     <p>${item.price}</p>
                                     <p>{cartItems[item._id]}</p>
                                     <p>${item.price * cartItems[item._id]}</p>
-                                    <p onClick={()=>removeFromcart(item._id)} className="cross">x</p>
+                                    <p onClick={() => removeFromCart(item._id)} className="cross">x</p>
                                 </div>
                                 <hr />
                             </div>
@@ -44,7 +44,7 @@ const Cart = () => {
                     <div>
                         <div className="cart-total-details">
                             <p>Subtotal</p>
-                            <p>${getTotalCartAmount}</p>
+                            <p>${getTotalCartAmount()}</p>
                         </div>
                         <hr />
                         <div className="cart-total-details">

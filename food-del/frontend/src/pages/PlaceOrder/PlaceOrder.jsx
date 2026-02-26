@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./PlaceOrder.css"
-import { StoreContext } from "../../context/StoreContext";
+import { StoreContext } from "../../context/store-context";
 
 export const PlaceOrder = () => {
     const {getTotalCartAmount, token, food_list, cartItems, url}= useContext(StoreContext)
@@ -55,7 +55,7 @@ export const PlaceOrder = () => {
                     <div>
                         <div className="cart-total-details">
                             <p>Subtotal</p>
-                            <p>${getTotalCartAmount}</p>
+                            <p>${getTotalCartAmount()}</p>
                         </div>
                         <hr />
                         <div className="cart-total-details">
