@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Add from './components/pages/Add/Add';
 import List from './components/pages/List/List';
 import Orders from "./components/pages/Orders/Orders";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 const App=()=>{
     const url = "http://localhost:3050"
