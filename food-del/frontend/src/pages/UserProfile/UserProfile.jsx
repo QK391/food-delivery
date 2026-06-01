@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { StoreContext } from "../../context/StoreContext";
 import "./UserProfile.css";
+import PasswordInput from "../../components/PasswordInput/PasswordInput";
 
 const UserProfile = () => {
   const { token, url, userProfile, setUserProfile } = useContext(StoreContext);
@@ -148,8 +149,7 @@ const PasswordForm = ({ token, url }) => {
       <form onSubmit={handleSubmit}>
         <div className="profile-field">
           <label>Mật khẩu hiện tại</label>
-          <input
-            type="password"
+          <PasswordInput
             value={currentPassword}
             onChange={(e) => setCurrentPassword(e.target.value)}
             placeholder="Nhập mật khẩu hiện tại"
@@ -158,8 +158,7 @@ const PasswordForm = ({ token, url }) => {
         </div>
         <div className="profile-field">
           <label>Mật khẩu mới</label>
-          <input
-            type="password"
+          <PasswordInput
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
             placeholder="Ít nhất 8 ký tự"
@@ -168,8 +167,7 @@ const PasswordForm = ({ token, url }) => {
         </div>
         <div className="profile-field">
           <label>Xác nhận mật khẩu mới</label>
-          <input
-            type="password"
+          <PasswordInput
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             placeholder="Nhập lại mật khẩu mới"

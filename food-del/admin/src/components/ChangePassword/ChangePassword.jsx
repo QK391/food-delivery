@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./ChangePassword.css";
+import PasswordInput from "../PasswordInput/PasswordInput";
 
 const ChangePassword = ({ url, onClose }) => {
     const [currentPassword, setCurrentPassword] = useState("");
@@ -53,8 +54,7 @@ const ChangePassword = ({ url, onClose }) => {
                 <form onSubmit={handleSubmit}>
                     <div className="change-password-field">
                         <label>Mật khẩu hiện tại</label>
-                        <input
-                            type="password"
+                        <PasswordInput
                             value={currentPassword}
                             onChange={(e) => setCurrentPassword(e.target.value)}
                             placeholder="Nhập mật khẩu hiện tại"
@@ -63,8 +63,7 @@ const ChangePassword = ({ url, onClose }) => {
                     </div>
                     <div className="change-password-field">
                         <label>Mật khẩu mới</label>
-                        <input
-                            type="password"
+                        <PasswordInput
                             value={newPassword}
                             onChange={(e) => setNewPassword(e.target.value)}
                             placeholder="Ít nhất 6 ký tự"
@@ -73,8 +72,7 @@ const ChangePassword = ({ url, onClose }) => {
                     </div>
                     <div className="change-password-field">
                         <label>Xác nhận mật khẩu mới</label>
-                        <input
-                            type="password"
+                        <PasswordInput
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                             placeholder="Nhập lại mật khẩu mới"

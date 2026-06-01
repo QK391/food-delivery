@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
+import PasswordInput from "../PasswordInput/PasswordInput";
 
 const Login = ({ url, onLogin }) => {
     const [username, setUsername] = useState("");
@@ -45,8 +46,7 @@ const Login = ({ url, onLogin }) => {
                 </div>
                 <div className="admin-login-field">
                     <label>Mật khẩu</label>
-                    <input
-                        type="password"
+                    <PasswordInput
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder="Nhập mật khẩu"

@@ -3,6 +3,7 @@ import { useSearchParams, Link } from "react-router-dom";
 import axios from "axios";
 import { StoreContext } from "../../context/StoreContext";
 import "./ResetPassword.css";
+import PasswordInput from "../../components/PasswordInput/PasswordInput";
 
 const ResetPassword = () => {
     const { url } = useContext(StoreContext);

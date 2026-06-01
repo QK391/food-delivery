@@ -3,6 +3,7 @@ import "./LoginPopup.css";
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
+import PasswordInput from "../PasswordInput/PasswordInput";
 
 const LoginPopup = ({ setShowLogin }) => {
     const { url, setToken } = useContext(StoreContext);
@@ -106,10 +107,12 @@ const LoginPopup = ({ setShowLogin }) => {
                         value={data.email} type="email"
                         placeholder="Email" required
                     />
-                    <input name="password"
+                    <PasswordInput
+                        name="password"
                         onChange={onChangeHandler}
-                        value={data.password} type="password"
-                        placeholder="Mật khẩu" required
+                        value={data.password}
+                        placeholder="Mật khẩu"
+                        required
                     />
                 </div>
                 {currState === "Đăng nhập" &&
