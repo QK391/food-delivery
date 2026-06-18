@@ -10,7 +10,7 @@
     height: 50px;
 }
 .navbar .logo {
-    width: max(10%, 80px);
+    width: max(7%, 80px);
 }
 .navbar-right {
     display: flex;

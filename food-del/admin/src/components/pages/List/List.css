@@ -17,9 +17,52 @@
 .list-table-format img {
     width: 50px;
 }
+.list-row-hidden {
+    background-color: #f9f9f9;
+    opacity: 0.75;
+}
+.list-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.list-badge--visible {
+    background-color: #d4edda;
+    color: #155724;
+}
+.list-badge--hidden {
+    background-color: #f8d7da;
+    color: #721c24;
+}
 .list-action {
     display: flex;
     align-items: center;
+}
+.list-action-btns {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.list-btn-toggle {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.list-btn-hide {
+    background-color: #f39c12;
+    color: #fff;
+}
+.list-btn-show {
+    background-color: #27ae60;
+    color: #fff;
+}
+.list-btn-toggle:hover {
+    opacity: 0.82;
 }
 .list-btn-delete {
     padding: 6px 14px;

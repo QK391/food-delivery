@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="footer" id="footer">
             <div className="footer-content">
                 <div className="footer-content-left">
-                    <img src={assets.logo} alt="" />
-                    <p>© 2026 FoodMart.</p>
+                    {/* <img src={assets.logo} alt="" /> */}
+                    <p>© 2026 Food Wagon.</p>
                 </div>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
@@ -29,7 +29,7 @@ const Footer = () => {
                     <h2>LIÊN HỆ</h2>
                     <ul>
                         <li>0866062568</li>
-                        <li>contact@foodmart.com</li>
+                        <li>contact@foodwagon.com</li>
                     </ul>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import express from "express"
-import { addFood, listFood, removeFood } from "../controllers/foodController.js"
+import { addFood, listFood, listAllFood, removeFood, toggleFoodVisibility } from "../controllers/foodController.js"
 import multer from "multer"
 
 const foodRouter = express.Router();
@@ -12,7 +12,9 @@ const storage = multer.diskStorage({
 })
 const upload = multer({storage: storage})
 foodRouter.post("/add", upload.single("image"), addFood)
-foodRouter.get("/list", listFood)
+foodRouter.get("/list", listFood)           // frontend: chỉ món đang hiển thị
+foodRouter.get("/list-all", listAllFood)    // admin: tất cả kể cả đang ẩn
 foodRouter.post("/remove", removeFood)
+foodRouter.post("/toggle-visibility", toggleFoodVisibility)
 
 export default foodRouter;

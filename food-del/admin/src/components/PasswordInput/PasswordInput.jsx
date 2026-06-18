@@ -20,7 +20,7 @@ const PasswordInput = ({ value, onChange, placeholder, required, autoFocus }) =>
                 tabIndex={-1}
                 aria-label={show ? "Ẩn mật khẩu" : "Hiện mật khẩu"}
             >
-                {show ? "🙈" : "👁"}
+                {show ? "*" : "👁"}
             </button>
         </div>
     );

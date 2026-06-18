@@ -114,15 +114,14 @@ const StoreContextProvider = (props) => {
         setUserProfile,
         fetchUserProfile,
         food_list: foodlist,
-        cartItems,
-        setCartItems,
-        addToCart,
-        removeFromCart,
         getTotalCartAmount,
-        appliedCoupon,
         setAppliedCoupon,
+        removeFromCart,
+        appliedCoupon,
+        setCartItems,
         categories,
-        
+        cartItems,
+        addToCart,
     }
     return (
         <StoreContext.Provider value={contextValue}>
